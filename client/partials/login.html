@@ -1,0 +1,9 @@
+<div ng-controller = "usersController as users">
+	<h3>Login Here!</h3>
+
+	<form ng-submit = "users.requestName(users.input)">
+		<label>Name: <input type = "text" ng-model = "users.input.name"></label>
+		<button>Submit</button>
+	</form>
+
+</div>

@@ -1,0 +1,53 @@
+<div ng-controller = 'dashboardController'>
+<nav>
+<a href = "#/">Logout</a>
+</nav>
+
+<h3>Welcome, <span ng-bind = "currentUser.name"></span>!</h3>
+	<h4>Bid Now!!!</h4>
+
+	<div id = 'productOne'>
+		<h3>Product One</h3>
+		<form ng-submit = 'newBidOne(newAmtOne)'>
+			<input type = 'text' ng-model = 'newAmtOne.body'>
+			<button>Bid</button>
+		</form>
+		<h4>Current Bids:</h4>
+			<ul ng-repeat = 'user in allUsers | filter: search'>
+				<li><span ng-bind = 'user.name'></span>: <span ng-bind = 'user.productOne'></span></li>
+			</ul>
+		<input type = 'text' ng-model = 'search' placeholder="Search">
+	</div>
+
+
+	<div id = 'productTwo'>
+		<h3>Product Two</h3>
+		<form ng-submit = 'newBidTwo(newAmtTwo)'>
+			<input type = 'text' ng-model = 'newAmtTwo.body'>
+			<button>Bid</button>
+		</form>
+		<h4>Current Bids:</h4>
+			<ul ng-repeat = 'user in allUsers | filter: search'>
+				<li><span ng-bind = 'user.name'></span>: <span ng-bind = 'user.productTwo'></span></li>
+			</ul>
+		<input type = 'text' ng-model = 'search' placeholder="Search">
+	</div>
+
+
+
+	<div id = 'productThree'>
+		<h3>Product Three</h3>
+		<form ng-submit = 'newBidThree(newAmtThree)'>
+			<input type = 'text' ng-model = 'newAmtThree.body'>
+			<button>Bid</button>
+		</form>
+		<h4>Current Bids:</h4>
+			<ul ng-repeat = 'user in allUsers | filter'>
+				<li><span ng-bind = 'user.name'></span>: <span ng-bind = 'user.productThree'></span></li>
+			</ul>
+		<input type = 'text' ng-model = 'search' placeholder="Search">
+	</div>
+
+	<button ng-click = 'biddingEnded()'>End Bid</button>
+
+</div>

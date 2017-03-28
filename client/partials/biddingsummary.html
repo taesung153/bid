@@ -1,0 +1,22 @@
+<div ng-controller = 'summaryController'>
+
+<div>
+	<div>
+		<h4>Product One</h4>
+		<h5>Highest Bid: <span ng-bind = 'winnerOne.name'></span>: <span ng-bind = 'winnerOne.amount'></span></h5>
+	</div>
+
+	<div>
+		<h4>Product Two</h4>
+		<h5>Highest Bid: <span ng-bind = 'winnerTwo.name'></span>: <span ng-bind = 'winnerTwo.amount'></span> </h5>
+	</div>
+
+	<div>
+		<h4>Product Three</h4>
+		<h5>Highest Bid: <span ng-bind = 'winnerThree.name'></span>: <span ng-bind = 'winnerThree.amount'></span></h5>
+	</div>
+</div>
+
+<button ng-click = 'startBidding()'>Start Bidding</button>
+
+</div>
